@@ -1,7 +1,7 @@
 #Haig Nalbandian Sample AI Code
 
-*Name: Haig Nalbandian
-*email: hnalband@usc.edu or haignalbandian@gmail.com
+* Name: Haig Nalbandian
+* email: hnalband@usc.edu or haignalbandian@gmail.com
 
 ###Descrption
 This is a naive bayesian learner that classifies emails (treated as "bags of words") as either spam or ham. This is done by evaluating the number of occurences of any given word in an email and assessian a probability of its spam-hood based on a given training set.
