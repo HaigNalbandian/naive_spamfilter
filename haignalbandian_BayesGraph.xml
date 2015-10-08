@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BIF VERSION="0.3"  xmlns="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3 http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3/XMLBIFv0_3.xsd">
+<NETWORK>
+<NAME>Untitled</NAME>
+<PROPERTY>detailed = </PROPERTY>
+<PROPERTY>short = </PROPERTY>
+
+<VARIABLE TYPE="nature">
+	<NAME>Smart</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7193.26708984375, 5046.4306640625)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Diligent</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7388.5927734375, 5051.2177734375)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Wealthy Family</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7598.27978515625, 5057.92041015625)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Attractive</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7805.0947265625, 5065.580078125)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Good Education</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7385.72021484375, 5190.0517578125)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Confident</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7178.9052734375, 5190.0517578125)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Married</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7649.0263671875, 5186.22216796875)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Saves Money</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7256.4609375, 5297.2890625)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Gambles</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7537.00146484375, 5283.884765625)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Millionaire by 30</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7432.63671875, 5403.5693359375)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Entrepeneurial</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7727.0, 5265.0)</PROPERTY>
+</VARIABLE>
+
+<DEFINITION>
+	<FOR>Smart</FOR>
+	<TABLE>0.1 0.9</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Diligent</FOR>
+	<TABLE>0.3 0.7</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Wealthy Family</FOR>
+	<TABLE>0.05 0.95</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Attractive</FOR>
+	<TABLE>0.4 0.6</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Good Education</FOR>
+	<GIVEN>Smart</GIVEN>
+	<GIVEN>Diligent</GIVEN>
+	<GIVEN>Wealthy Family</GIVEN>
+	<TABLE>1.0 0.0 0.6 0.4 0.7 0.3 0.3 0.7 0.8 0.2 0.6 0.4 0.7 0.3 0.05 0.95</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Confident</FOR>
+	<GIVEN>Smart</GIVEN>
+	<TABLE>0.6 0.4 0.8 0.2</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Married</FOR>
+	<GIVEN>Wealthy Family</GIVEN>
+	<GIVEN>Attractive</GIVEN>
+	<TABLE>0.8 0.2 0.6 0.4 0.7 0.3 0.3 0.7</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Saves Money</FOR>
+	<GIVEN>Good Education</GIVEN>
+	<GIVEN>Married</GIVEN>
+	<TABLE>0.9 0.1 0.7 0.3 0.7 0.3 0.3 0.7</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Gambles</FOR>
+	<GIVEN>Wealthy Family</GIVEN>
+	<GIVEN>Confident</GIVEN>
+	<TABLE>0.9 0.1 0.6 0.4 1.0 0.0 0.4 0.6</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Millionaire by 30</FOR>
+	<GIVEN>Good Education</GIVEN>
+	<GIVEN>Saves Money</GIVEN>
+	<GIVEN>Gambles</GIVEN>
+	<GIVEN>Entrepeneurial</GIVEN>
+	<TABLE>0.8 0.2 0.8 0.2 0.7 0.3 0.7 0.3 0.3 0.7 0.3 0.7 0.1 0.9 0.1 0.9 0.8 0.2 0.8 0.2 0.7 0.3 0.7 0.3 0.3 0.7 0.3 0.7 0.1 0.9 0.1 0.9</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Entrepeneurial</FOR>
+	<GIVEN>Attractive</GIVEN>
+	<TABLE>0.6 0.4 0.4 0.6</TABLE>
+</DEFINITION>
+</NETWORK>
+</BIF>
